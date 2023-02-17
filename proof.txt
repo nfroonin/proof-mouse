@@ -1,0 +1,21 @@
+Z
+1. B -> ~X prem;
+2. (Y \/ A) -> Z prem;
+3. ~X -> Y prem;
+4. Z \/ B prem;
+5. ~(Y \/ A) \/ Z imp 2;
+6. (~Y /\ ~A) \/ Z dm_oa 5;
+7. Z \/ (~Y /\ ~A) or_comm 7;
+8. (Z \/ ~Y) /\ (Z \/ ~A) dist_oa 7;
+9. Z \/ ~Y simpl 8;
+10. ~Y \/ Z or_comm 9;
+11. B -> Y hs 1, 3;
+| 12. ~Z hyp;
+| 13. B ds 4, 12;
+| 14. Y mp 11, 13;
+| 15. ~~Y dn 14;
+| 16. Z ds 9, 15;
+17. ~Z -> Z ded 12-16;
+18. ~~Z \/ Z imp 17;
+19. Z \/ Z dn 18;
+20. Z or_self 19;
